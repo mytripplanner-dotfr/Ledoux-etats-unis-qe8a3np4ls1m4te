@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détente et Nature sur la Côte Est Américaine </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token="/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à New York, la Grosse Pomme</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Oasis urbaine et vues imprenables</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Histoire et art de vivre à Brooklyn</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Évasion vers la vallée de l'Hudson</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Châteaux et jardins historiques</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Nature et cascades des Catskills</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Villages artistiques et panoramas</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Vers les sources thermales de Virginie-Occidentale</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Journée de pure détente à Berkeley Springs</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Nature et histoire locale</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Retour vers la civilisation et la Pennsylvanie</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Immersion dans le pays Amish</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Philadelphie, berceau de l'Amérique</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Art, culture et détente à Philadelphie</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Retour vers New York et shopping décontracté</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Derniers instants new-yorkais</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Départ de New York</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">LEDOUX- ETATS UNIS</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Détente et Nature sur la Côte Est Américaine</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 17 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 4100 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 8h00 (depuis Paris CDG)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à New York, la Grosse Pomme</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un vol transatlantique, prenez le temps de vous installer et de vous imprégner de l'ambiance unique de New York. Une première balade douce vous permettra de découvrir les environs de votre hébergement.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à l'aéroport JFK</strong>: Récupération des bagages et transfert vers Manhattan.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Détendez-vous après le voyage.</li><li>🚶‍♂️ <strong>Balade relaxante à Times Square</strong>: Admirez les lumières sans la foule du jour, puis dîner léger.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le trajet depuis JFK vers Manhattan peut prendre entre 45 min et 1h30 selon le trafic. Privilégiez l'AirTrain + métro pour l'efficacité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Oasis urbaine et vues imprenables</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez le poumon vert de Manhattan, Central Park, avant de prendre de la hauteur pour admirer la skyline emblématique. Une journée équilibrée entre nature et architecture.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♀️ <strong>Promenade matinale à Central Park</strong>: Flânez autour de Bethesda Terrace et Strawberry Fields.</li><li>🖼️ <strong>Visite du Metropolitan Museum of Art (MET)</strong>: Choisissez une aile pour une exploration douce.</li><li>🏙️ <strong>Coucher de soleil depuis Top of the Rock</strong>: Profitez d'une vue panoramique sur l'Empire State Building et Central Park.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Astuce</p>
+                                <p class="text-gray-700">Central Park est immense. Louez un vélo ou concentrez-vous sur une section pour une balade plus relaxante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Histoire et art de vivre à Brooklyn</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une croisière relaxante offrant des vues iconiques, puis traversez le pont de Brooklyn pour explorer les quartiers branchés et artistiques de l'autre rive.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚢 <strong>Croisière Statue de la Liberté et Ellis Island</strong>: Admirez les monuments depuis l'eau, sans descendre.</li><li>🚶‍♂️ <strong>Traversée du Pont de Brooklyn</strong>: Profitez des vues sur Manhattan et le quartier de Dumbo.</li><li>🎨 <strong>Exploration de Dumbo et Brooklyn Heights</strong>: Flânez dans les rues pavées, découvrez les galeries et cafés.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Pause gourmande</p>
+                                <p class="text-gray-700">Dumbo regorge de restaurants et de pizzerias réputées pour un dîner décontracté.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion vers la vallée de l'Hudson</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez l'effervescence de la ville pour les paysages bucoliques de la vallée de l'Hudson. Une journée dédiée à la nature, l'art et la gastronomie locale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Location de voiture et départ pour la Hudson Valley</strong>: Profitez de la route panoramique.</li><li>🖼️ <strong>Visite de Storm King Art Center</strong>: Balade douce parmi les sculptures monumentales en plein air.</li><li>🍷 <strong>Dégustation de vins dans un vignoble local</strong>: Découvrez les vins de la région dans une ambiance relaxante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Itinéraire</p>
+                                <p class="text-gray-700">La Hudson Valley est vaste. Concentrez-vous sur la partie inférieure ou moyenne pour minimiser les trajets.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Châteaux et jardins historiques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les demeures historiques et les jardins luxuriants qui jalonnent la vallée de l'Hudson, témoins d'un riche passé américain. Une journée de découverte culturelle et de sérénité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite de Kykuit, la propriété Rockefeller</strong>: Découvrez l'histoire et l'art de cette demeure emblématique.</li><li>🌸 <strong>Promenade dans les jardins de Stonecrop Gardens</strong>: Un havre de paix pour les amoureux de la botanique.</li><li>🍽️ <strong>Dîner dans un restaurant "farm-to-table"</strong>: Savourez les produits frais de la région.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎟️ Réservation</p>
+                                <p class="text-gray-700">Les visites de Kykuit sont souvent complètes, réservez vos billets à l'avance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature et cascades des Catskills</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Poursuivez votre route vers les montagnes Catskill, un paradis pour les amoureux de la nature. Des balades douces et la découverte de cascades apaisantes vous attendent.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers les Catskill Mountains</strong>: Profitez des paysages montagneux.</li><li>🚶‍♀️ <strong>Randonnée facile à Kaaterskill Falls</strong>: Admirez l'une des plus belles cascades de l'État de New York.</li><li>🧘‍♀️ <strong>Détente dans un spa local</strong>: Offrez-vous un moment de relaxation bien mérité.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥾 Équipement</p>
+                                <p class="text-gray-700">Prévoyez des chaussures confortables pour les balades, même si les sentiers sont doux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Villages artistiques et panoramas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les charmants villages des Catskills, connus pour leur ambiance artistique et leurs boutiques uniques. Terminez la journée par un point de vue offrant des panoramas à couper le souffle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Visite du village de Woodstock</strong>: Flânez dans les boutiques d'art et d'artisanat.</li><li>🏞️ <strong>Balade au Overlook Mountain</strong>: Profitez d'une vue imprenable sur la vallée et les ruines d'un ancien hôtel.</li><li>🍽️ <strong>Dîner dans une auberge de campagne</strong>: Goûtez aux saveurs locales dans une ambiance chaleureuse.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎶 Histoire</p>
+                                <p class="text-gray-700">Woodstock est célèbre pour le festival de musique de 1969, bien que l'événement ait eu lieu à Bethel, à environ 1h30 de route.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers les sources thermales de Virginie-Occidentale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Une journée de transition vous mènera vers les célèbres sources thermales de Berkeley Springs, en Virginie-Occidentale. Préparez-vous à une immersion totale dans la relaxation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Longue route vers Berkeley Springs, Virginie-Occidentale</strong>: Traversez des paysages variés.</li><li>🛏️ <strong>Installation à l'hôtel/spa</strong>: Profitez des installations dès votre arrivée.</li><li>♨️ <strong>Première immersion dans les sources chaudes</strong>: Détendez-vous dans les eaux minérales naturelles.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛣️ Trajet</p>
+                                <p class="text-gray-700">Le trajet est d'environ 5-6 heures. Prévoyez des pauses régulières et de quoi vous restaurer en chemin.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de pure détente à Berkeley Springs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez pleinement des bienfaits des sources thermales de Berkeley Springs, une ville réputée pour ses propriétés curatives. Une journée dédiée au bien-être et à la relaxation profonde.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💆‍♀️ <strong>Soins au spa et bains minéraux</strong>: Laissez-vous choyer par les traitements proposés.</li><li>🚶‍♀️ <strong>Balade dans le Berkeley Springs State Park</strong>: Découvrez les sources naturelles et l'histoire du parc.</li><li>📚 <strong>Lecture et repos</strong>: Profitez du calme pour vous ressourcer.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Histoire</p>
+                                <p class="text-gray-700">George Washington lui-même était un visiteur régulier des sources de Berkeley Springs, les considérant comme un lieu de guérison.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature et histoire locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après la détente, explorez les environs de Berkeley Springs, entre nature préservée et petites pépites historiques. Une journée pour apprécier la tranquillité de la Virginie-Occidentale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♂️ <strong>Randonnée douce au Cacapon State Park</strong>: Profitez des sentiers forestiers et des vues sur les montagnes.</li><li>🏛️ <strong>Visite du musée local de Berkeley Springs</strong>: Plongez dans l'histoire de cette ville thermale.</li><li>🌅 <strong>Coucher de soleil sur les montagnes</strong>: Trouvez un point de vue pour admirer les couleurs du soir.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦌 Faune</p>
+                                <p class="text-gray-700">Soyez attentifs, vous pourriez apercevoir des cerfs ou d'autres animaux sauvages lors de vos balades.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers la civilisation et la Pennsylvanie</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Reprenez la route vers le nord, en direction de la Pennsylvanie. Une étape dans la charmante ville de Gettysburg vous plongera dans un pan majeur de l'histoire américaine.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers Gettysburg, Pennsylvanie</strong>: Un trajet d'environ 2-3 heures.</li><li>🏛️ <strong>Visite du Gettysburg National Military Park Museum & Visitor Center</strong>: Introduction à la bataille.</li><li>🚶‍♂️ <strong>Balade en voiture ou à pied sur le champ de bataille</strong>: Explorez les sites clés de manière respectueuse.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📖 Histoire</p>
+                                <p class="text-gray-700">Gettysburg fut le théâtre d'une bataille décisive de la Guerre de Sécession en juillet 1863.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion dans le pays Amish</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez un mode de vie unique et paisible dans le pays Amish de Lancaster. Une journée pour ralentir et apprécier la simplicité et les traditions.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers Lancaster County</strong>: Environ 1h de route depuis Gettysburg.</li><li>🐎 <strong>Visite d'une ferme Amish</strong>: Apprenez-en plus sur leur culture et leur artisanat.</li><li>🛍️ <strong>Exploration des marchés locaux</strong>: Dégustez des produits frais et des spécialités Amish.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Respect</p>
+                                <p class="text-gray-700">Il est important de respecter la vie privée des Amish. Demandez toujours la permission avant de prendre des photos.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Philadelphie, berceau de l'Amérique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'histoire fondatrice des États-Unis à Philadelphie, une ville riche en monuments emblématiques. Une journée de découverte culturelle à un rythme doux.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers Philadelphie</strong>: Environ 1h30 de route depuis Lancaster.</li><li>🔔 <strong>Visite de l'Independence Hall et de la Liberty Bell</strong>: Découvrez les symboles de l'indépendance américaine.</li><li>🚶‍♀️ <strong>Balade dans le quartier historique de Society Hill</strong>: Admirez l'architecture coloniale et les rues pavées.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧀 Spécialité</p>
+                                <p class="text-gray-700">Ne quittez pas Philadelphie sans goûter un authentique Philly Cheesesteak!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art, culture et détente à Philadelphie</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les musées de renommée mondiale de Philadelphie et profitez d'une balade le long de la rivière. Une journée pour apprécier la richesse culturelle de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🖼️ <strong>Visite du Philadelphia Museum of Art</strong>: Admirez les collections et montez les "Rocky Steps".</li><li>🌳 <strong>Promenade le long de la Schuylkill River Trail</strong>: Profitez d'une balade paisible au bord de l'eau.</li><li>🍽️ <strong>Dîner dans le quartier de Rittenhouse Square</strong>: Découvrez les restaurants élégants et l'ambiance animée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏃‍♂️ Anecdote</p>
+                                <p class="text-gray-700">Les "Rocky Steps" devant le musée d'art sont célèbres grâce au film "Rocky". N'hésitez pas à monter les marches pour une photo!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers New York et shopping décontracté</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Reprenez la route vers New York pour vos dernières nuits. Profitez de l'après-midi pour un peu de shopping ou une dernière balade dans un quartier que vous avez apprécié.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route vers New York City</strong>: Environ 2 heures de route depuis Philadelphie.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Profitez d'un quartier différent si possible.</li><li>🛍️ <strong>Shopping ou balade à Greenwich Village</strong>: Découvrez les boutiques indépendantes et l'ambiance bohème.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎶 Ambiance</p>
+                                <p class="text-gray-700">Greenwich Village est connu pour son histoire musicale et artistique. C'est un endroit idéal pour une balade décontractée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers instants new-yorkais</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée pour revisiter un lieu coup de cœur, découvrir un nouveau quartier ou simplement vous détendre dans un café. Une fin de voyage en douceur.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>☕ <strong>Brunch dans un café branché</strong>: Savourez un dernier repas typiquement new-yorkais.</li><li>🚶‍♀️ <strong>Balade sur la High Line</strong>: Une promenade urbaine sur une ancienne voie ferrée transformée en parc suspendu.</li><li>🎭 <strong>Spectacle de Broadway (optionnel)</strong>: Si l'envie vous prend, terminez en beauté avec un show.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎭 Billets</p>
+                                <p class="text-gray-700">Pour les spectacles de Broadway, achetez vos billets à l'avance ou tentez les loteries pour des prix réduits.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de New York</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à la Côte Est américaine. Profitez d'un dernier petit-déjeuner avant de vous diriger vers l'aéroport pour votre vol retour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>☕ <strong>Petit-déjeuner tranquille</strong>: Profitez des derniers instants.</li><li>🛍️ <strong>Achats de dernière minute (optionnel)</strong>: Si le temps le permet.</li><li>🛫 <strong>Transfert vers l'aéroport JFK et vol retour</strong>: Fin du voyage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Ledoux-etats-unis-qe8a3np4ls1m4te/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Conseil</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le transfert vers l'aéroport et les formalités de sécurité, surtout en période de pointe.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛬 Budget vol: </strong>217 €/pers (A/R depuis Paris CDG)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🚗 Budget transports: </strong>Environ 575 €/pers (location voiture, essence, transports NYC)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥗 Budget repas: </strong>Environ 1200 €/pers (restaurants variés, quelques repas rapides)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛏️ Budget logement: </strong>Environ 1500 €/pers (hôtels 3* ou équivalent)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🎭 Budget activités: </strong>Environ 600 €/pers (musées, parcs, spa, vignobles)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Mai-Juin</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Septembre-Octobre</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☀️ En mai-juin, les températures varient entre 15 et 25°C. Prévoir des couches de vêtements pour les soirées plus fraîches.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 Les cartes de crédit sont largement acceptées. Prévoir quelques dollars en espèces pour les petites dépenses ou les pourboires.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 Un permis de conduire français est suffisant pour louer une voiture. La conduite est à droite, et les distances sont en miles, les vitesses en mph.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Une eSIM ou une carte SIM locale (T-Mobile, AT&T) est recommandée pour la navigation et la communication. Le Wi-Fi est disponible dans la plupart des hébergements.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💲 Les pourboires sont une pratique courante et attendue aux États-Unis (15-20% dans les restaurants, pour les chauffeurs, etc.).</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Anecdotes
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>💡 Le saviez-vous ?:</strong> New York City est la ville la plus linguistiquement diverse au monde, avec plus de 800 langues parlées par ses habitants. C'est une véritable mosaïque culturelle!</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🙃 Insolite:</strong> Le surnom "Big Apple" pour New York ne vient pas des fruits, mais d'une chronique hippique des années 1920, où les grandes courses étaient appelées "les grosses pommes" (the big apples) en référence aux récompenses.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Spécialités culinaires
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍰 New York Cheesecake:</strong> Un gâteau au fromage crémeux et riche, souvent servi avec un coulis de fruits rouges. Un classique indémodable de la pâtisserie américaine.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥯 Bagel & Lox:</strong> Un bagel frais, souvent grillé, garni de cream cheese, de saumon fumé (lox), de câpres et d'oignons rouges. Un petit-déjeuner ou brunch emblématique de New York.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥪 Philly Cheesesteak:</strong> Un sandwich chaud composé de fines tranches de bœuf grillé et de fromage fondu (souvent du Cheez Whiz ou du provolone), servi dans un long pain. Une spécialité incontournable de Philadelphie.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Ledoux-etats-unis-qe8a3np4ls1m4te/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/CDG-JFK/2026-05-15/2026-06-01" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.nycgo.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme New York</strong></a></li>
+                    
+                        <li><a href="https://www.rentalcars.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚗 Rentalcars.com</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ AccuWeather</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
