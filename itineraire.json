@@ -1,0 +1,585 @@
+{
+  "pays": "États-Unis",
+  "drapeau": "🇺🇸",
+  "symbole": "🗽",
+  "titre": "Détente et Nature sur la Côte Est Américaine",
+  "budget_total": "Environ 4100 €/personne",
+  "duree": "17 jours",
+  "temps_vol": "8h00 (depuis Paris CDG)",
+  "escale": "0",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à New York, la Grosse Pomme",
+      "legende": "Après un vol transatlantique, prenez le temps de vous installer et de vous imprégner de l'ambiance unique de New York. Une première balade douce vous permettra de découvrir les environs de votre hébergement.",
+      "lieu": "New York City",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport JFK</strong>: Récupération des bagages et transfert vers Manhattan.",
+        "🛏️ <strong>Installation à l'hôtel</strong>: Détendez-vous après le voyage.",
+        "🚶‍♂️ <strong>Balade relaxante à Times Square</strong>: Admirez les lumières sans la foule du jour, puis dîner léger."
+      ],
+      "illustration": "new_york_arrival.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le trajet depuis JFK vers Manhattan peut prendre entre 45 min et 1h30 selon le trafic. Privilégiez l'AirTrain + métro pour l'efficacité."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🌳",
+      "titre": "Oasis urbaine et vues imprenables",
+      "legende": "Découvrez le poumon vert de Manhattan, Central Park, avant de prendre de la hauteur pour admirer la skyline emblématique. Une journée équilibrée entre nature et architecture.",
+      "lieu": "New York City",
+      "activites": [
+        "🚶‍♀️ <strong>Promenade matinale à Central Park</strong>: Flânez autour de Bethesda Terrace et Strawberry Fields.",
+        "🖼️ <strong>Visite du Metropolitan Museum of Art (MET)</strong>: Choisissez une aile pour une exploration douce.",
+        "🏙️ <strong>Coucher de soleil depuis Top of the Rock</strong>: Profitez d'une vue panoramique sur l'Empire State Building et Central Park."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Central Park, New York",
+          "categorie": "Parc",
+          "coords": { "lat": 40.7851, "lng": -73.9683 }
+        },
+        {
+          "nom_recherche": "Metropolitan Museum of Art, New York",
+          "categorie": "Musée",
+          "coords": { "lat": 40.7794, "lng": -73.9632 }
+        },
+        {
+          "nom_recherche": "Top of the Rock, New York",
+          "categorie": "Point de vue",
+          "coords": { "lat": 40.7591, "lng": -73.9791 }
+        }
+      ],
+      "illustration": "central_park_top_of_the_rock.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Astuce",
+          "texte": "Central Park est immense. Louez un vélo ou concentrez-vous sur une section pour une balade plus relaxante."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🚢",
+      "titre": "Histoire et art de vivre à Brooklyn",
+      "legende": "Embarquez pour une croisière relaxante offrant des vues iconiques, puis traversez le pont de Brooklyn pour explorer les quartiers branchés et artistiques de l'autre rive.",
+      "lieu": "New York City",
+      "activites": [
+        "🚢 <strong>Croisière Statue de la Liberté et Ellis Island</strong>: Admirez les monuments depuis l'eau, sans descendre.",
+        "🚶‍♂️ <strong>Traversée du Pont de Brooklyn</strong>: Profitez des vues sur Manhattan et le quartier de Dumbo.",
+        "🎨 <strong>Exploration de Dumbo et Brooklyn Heights</strong>: Flânez dans les rues pavées, découvrez les galeries et cafés."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Statue de la Liberté, New York",
+          "categorie": "Monument",
+          "coords": { "lat": 40.6892, "lng": -74.0445 }
+        },
+        {
+          "nom_recherche": "Pont de Brooklyn, New York",
+          "categorie": "Pont",
+          "coords": { "lat": 40.7061, "lng": -73.9969 }
+        },
+        {
+          "nom_recherche": "Dumbo, Brooklyn, New York",
+          "categorie": "Quartier",
+          "coords": { "lat": 40.7033, "lng": -73.9880 }
+        }
+      ],
+      "illustration": "brooklyn_bridge_dumbo.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Pause gourmande",
+          "texte": "Dumbo regorge de restaurants et de pizzerias réputées pour un dîner décontracté."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🚗",
+      "titre": "Évasion vers la vallée de l'Hudson",
+      "legende": "Quittez l'effervescence de la ville pour les paysages bucoliques de la vallée de l'Hudson. Une journée dédiée à la nature, l'art et la gastronomie locale.",
+      "lieu": "Hudson Valley, New York",
+      "activites": [
+        "🚗 <strong>Location de voiture et départ pour la Hudson Valley</strong>: Profitez de la route panoramique.",
+        "🖼️ <strong>Visite de Storm King Art Center</strong>: Balade douce parmi les sculptures monumentales en plein air.",
+        "🍷 <strong>Dégustation de vins dans un vignoble local</strong>: Découvrez les vins de la région dans une ambiance relaxante."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Storm King Art Center, New Windsor",
+          "categorie": "Musée en plein air",
+          "coords": { "lat": 41.3936, "lng": -74.0620 }
+        },
+        {
+          "nom_recherche": "Millbrook Vineyards & Winery, Millbrook",
+          "categorie": "Vignoble",
+          "coords": { "lat": 41.7946, "lng": -73.7225 }
+        }
+      ],
+      "illustration": "hudson_valley_storm_king.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Itinéraire",
+          "texte": "La Hudson Valley est vaste. Concentrez-vous sur la partie inférieure ou moyenne pour minimiser les trajets."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏰",
+      "titre": "Châteaux et jardins historiques",
+      "legende": "Explorez les demeures historiques et les jardins luxuriants qui jalonnent la vallée de l'Hudson, témoins d'un riche passé américain. Une journée de découverte culturelle et de sérénité.",
+      "lieu": "Hudson Valley, New York",
+      "activites": [
+        "🏛️ <strong>Visite de Kykuit, la propriété Rockefeller</strong>: Découvrez l'histoire et l'art de cette demeure emblématique.",
+        "🌸 <strong>Promenade dans les jardins de Stonecrop Gardens</strong>: Un havre de paix pour les amoureux de la botanique.",
+        "🍽️ <strong>Dîner dans un restaurant \"farm-to-table\"</strong>: Savourez les produits frais de la région."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Kykuit, Pocantico Hills",
+          "categorie": "Demeure historique",
+          "coords": { "lat": 41.0664, "lng": -73.8647 }
+        },
+        {
+          "nom_recherche": "Stonecrop Gardens, Cold Spring",
+          "categorie": "Jardin botanique",
+          "coords": { "lat": 41.4425, "lng": -73.8961 }
+        }
+      ],
+      "illustration": "kykuit_gardens.jpg",
+      "encarts": [
+        {
+          "symbole": "🎟️",
+          "titre": "Réservation",
+          "texte": "Les visites de Kykuit sont souvent complètes, réservez vos billets à l'avance."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🏞️",
+      "titre": "Nature et cascades des Catskills",
+      "legende": "Poursuivez votre route vers les montagnes Catskill, un paradis pour les amoureux de la nature. Des balades douces et la découverte de cascades apaisantes vous attendent.",
+      "lieu": "Catskill Mountains, New York",
+      "activites": [
+        "🚗 <strong>Route vers les Catskill Mountains</strong>: Profitez des paysages montagneux.",
+        "🚶‍♀️ <strong>Randonnée facile à Kaaterskill Falls</strong>: Admirez l'une des plus belles cascades de l'État de New York.",
+        "🧘‍♀️ <strong>Détente dans un spa local</strong>: Offrez-vous un moment de relaxation bien mérité."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Kaaterskill Falls, Haines Falls",
+          "categorie": "Cascade",
+          "coords": { "lat": 42.1930, "lng": -74.0720 }
+        },
+        {
+          "nom_recherche": "Mohonk Mountain House, New Paltz",
+          "categorie": "Spa/Hôtel historique",
+          "coords": { "lat": 41.7690, "lng": -74.1520 }
+        }
+      ],
+      "illustration": "kaaterskill_falls.jpg",
+      "encarts": [
+        {
+          "symbole": "🥾",
+          "titre": "Équipement",
+          "texte": "Prévoyez des chaussures confortables pour les balades, même si les sentiers sont doux."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🎨",
+      "titre": "Villages artistiques et panoramas",
+      "legende": "Explorez les charmants villages des Catskills, connus pour leur ambiance artistique et leurs boutiques uniques. Terminez la journée par un point de vue offrant des panoramas à couper le souffle.",
+      "lieu": "Catskill Mountains, New York",
+      "activites": [
+        "🛍️ <strong>Visite du village de Woodstock</strong>: Flânez dans les boutiques d'art et d'artisanat.",
+        "🏞️ <strong>Balade au Overlook Mountain</strong>: Profitez d'une vue imprenable sur la vallée et les ruines d'un ancien hôtel.",
+        "🍽️ <strong>Dîner dans une auberge de campagne</strong>: Goûtez aux saveurs locales dans une ambiance chaleureuse."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Woodstock, New York",
+          "categorie": "Village",
+          "coords": { "lat": 42.0409, "lng": -74.1193 }
+        },
+        {
+          "nom_recherche": "Overlook Mountain, Woodstock",
+          "categorie": "Randonnée/Point de vue",
+          "coords": { "lat": 42.0720, "lng": -74.1560 }
+        }
+      ],
+      "illustration": "woodstock_catskills.jpg",
+      "encarts": [
+        {
+          "symbole": "🎶",
+          "titre": "Histoire",
+          "texte": "Woodstock est célèbre pour le festival de musique de 1969, bien que l'événement ait eu lieu à Bethel, à environ 1h30 de route."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "♨️",
+      "titre": "Vers les sources thermales de Virginie-Occidentale",
+      "legende": "Une journée de transition vous mènera vers les célèbres sources thermales de Berkeley Springs, en Virginie-Occidentale. Préparez-vous à une immersion totale dans la relaxation.",
+      "lieu": "Berkeley Springs, Virginie-Occidentale",
+      "activites": [
+        "🚗 <strong>Longue route vers Berkeley Springs, Virginie-Occidentale</strong>: Traversez des paysages variés.",
+        "🛏️ <strong>Installation à l'hôtel/spa</strong>: Profitez des installations dès votre arrivée.",
+        "♨️ <strong>Première immersion dans les sources chaudes</strong>: Détendez-vous dans les eaux minérales naturelles."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Berkeley Springs State Park, Berkeley Springs",
+          "categorie": "Parc/Sources chaudes",
+          "coords": { "lat": 39.6276, "lng": -78.2190 }
+        }
+      ],
+      "illustration": "berkeley_springs_road.jpg",
+      "encarts": [
+        {
+          "symbole": "🛣️",
+          "titre": "Trajet",
+          "texte": "Le trajet est d'environ 5-6 heures. Prévoyez des pauses régulières et de quoi vous restaurer en chemin."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "💆‍♀️",
+      "titre": "Journée de pure détente à Berkeley Springs",
+      "legende": "Profitez pleinement des bienfaits des sources thermales de Berkeley Springs, une ville réputée pour ses propriétés curatives. Une journée dédiée au bien-être et à la relaxation profonde.",
+      "lieu": "Berkeley Springs, Virginie-Occidentale",
+      "activites": [
+        "💆‍♀️ <strong>Soins au spa et bains minéraux</strong>: Laissez-vous choyer par les traitements proposés.",
+        "🚶‍♀️ <strong>Balade dans le Berkeley Springs State Park</strong>: Découvrez les sources naturelles et l'histoire du parc.",
+        "📚 <strong>Lecture et repos</strong>: Profitez du calme pour vous ressourcer."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Berkeley Springs State Park, Berkeley Springs",
+          "categorie": "Parc/Sources chaudes",
+          "coords": { "lat": 39.6276, "lng": -78.2190 }
+        }
+      ],
+      "illustration": "berkeley_springs_spa.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Histoire",
+          "texte": "George Washington lui-même était un visiteur régulier des sources de Berkeley Springs, les considérant comme un lieu de guérison."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🌳",
+      "titre": "Nature et histoire locale",
+      "legende": "Après la détente, explorez les environs de Berkeley Springs, entre nature préservée et petites pépites historiques. Une journée pour apprécier la tranquillité de la Virginie-Occidentale.",
+      "lieu": "Berkeley Springs, Virginie-Occidentale",
+      "activites": [
+        "🚶‍♂️ <strong>Randonnée douce au Cacapon State Park</strong>: Profitez des sentiers forestiers et des vues sur les montagnes.",
+        "🏛️ <strong>Visite du musée local de Berkeley Springs</strong>: Plongez dans l'histoire de cette ville thermale.",
+        "🌅 <strong>Coucher de soleil sur les montagnes</strong>: Trouvez un point de vue pour admirer les couleurs du soir."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Cacapon State Park, Berkeley Springs",
+          "categorie": "Parc d'État",
+          "coords": { "lat": 39.5800, "lng": -78.2900 }
+        },
+        {
+          "nom_recherche": "Museum of the Berkeley Springs, Berkeley Springs",
+          "categorie": "Musée",
+          "coords": { "lat": 39.6270, "lng": -78.2180 }
+        }
+      ],
+      "illustration": "cacapon_state_park.jpg",
+      "encarts": [
+        {
+          "symbole": "🦌",
+          "titre": "Faune",
+          "texte": "Soyez attentifs, vous pourriez apercevoir des cerfs ou d'autres animaux sauvages lors de vos balades."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🛣️",
+      "titre": "Retour vers la civilisation et la Pennsylvanie",
+      "legende": "Reprenez la route vers le nord, en direction de la Pennsylvanie. Une étape dans la charmante ville de Gettysburg vous plongera dans un pan majeur de l'histoire américaine.",
+      "lieu": "Gettysburg, Pennsylvanie",
+      "activites": [
+        "🚗 <strong>Route vers Gettysburg, Pennsylvanie</strong>: Un trajet d'environ 2-3 heures.",
+        "🏛️ <strong>Visite du Gettysburg National Military Park Museum & Visitor Center</strong>: Introduction à la bataille.",
+        "🚶‍♂️ <strong>Balade en voiture ou à pied sur le champ de bataille</strong>: Explorez les sites clés de manière respectueuse."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Gettysburg National Military Park, Gettysburg",
+          "categorie": "Parc historique",
+          "coords": { "lat": 39.8146, "lng": -77.2350 }
+        }
+      ],
+      "illustration": "gettysburg_battlefield.jpg",
+      "encarts": [
+        {
+          "symbole": "📖",
+          "titre": "Histoire",
+          "texte": "Gettysburg fut le théâtre d'une bataille décisive de la Guerre de Sécession en juillet 1863."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": " Amish",
+      "titre": "Immersion dans le pays Amish",
+      "legende": "Découvrez un mode de vie unique et paisible dans le pays Amish de Lancaster. Une journée pour ralentir et apprécier la simplicité et les traditions.",
+      "lieu": "Lancaster, Pennsylvanie",
+      "activites": [
+        "🚗 <strong>Route vers Lancaster County</strong>: Environ 1h de route depuis Gettysburg.",
+        "🐎 <strong>Visite d'une ferme Amish</strong>: Apprenez-en plus sur leur culture et leur artisanat.",
+        "🛍️ <strong>Exploration des marchés locaux</strong>: Dégustez des produits frais et des spécialités Amish."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Amish Village, Strasburg",
+          "categorie": "Attraction culturelle",
+          "coords": { "lat": 40.0070, "lng": -76.1770 }
+        },
+        {
+          "nom_recherche": "Central Market, Lancaster",
+          "categorie": "Marché",
+          "coords": { "lat": 40.0380, "lng": -76.3040 }
+        }
+      ],
+      "illustration": "amish_country_lancaster.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Respect",
+          "texte": "Il est important de respecter la vie privée des Amish. Demandez toujours la permission avant de prendre des photos."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🔔",
+      "titre": "Philadelphie, berceau de l'Amérique",
+      "legende": "Plongez dans l'histoire fondatrice des États-Unis à Philadelphie, une ville riche en monuments emblématiques. Une journée de découverte culturelle à un rythme doux.",
+      "lieu": "Philadelphie, Pennsylvanie",
+      "activites": [
+        "🚗 <strong>Route vers Philadelphie</strong>: Environ 1h30 de route depuis Lancaster.",
+        "🔔 <strong>Visite de l'Independence Hall et de la Liberty Bell</strong>: Découvrez les symboles de l'indépendance américaine.",
+        "🚶‍♀️ <strong>Balade dans le quartier historique de Society Hill</strong>: Admirez l'architecture coloniale et les rues pavées."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Independence Hall, Philadelphie",
+          "categorie": "Monument historique",
+          "coords": { "lat": 39.9487, "lng": -75.1500 }
+        },
+        {
+          "nom_recherche": "Liberty Bell, Philadelphie",
+          "categorie": "Monument historique",
+          "coords": { "lat": 39.9496, "lng": -75.1502 }
+        },
+        {
+          "nom_recherche": "Society Hill, Philadelphie",
+          "categorie": "Quartier historique",
+          "coords": { "lat": 39.9440, "lng": -75.1470 }
+        }
+      ],
+      "illustration": "philadelphia_liberty_bell.jpg",
+      "encarts": [
+        {
+          "symbole": "🧀",
+          "titre": "Spécialité",
+          "texte": "Ne quittez pas Philadelphie sans goûter un authentique Philly Cheesesteak!"
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🖼️",
+      "titre": "Art, culture et détente à Philadelphie",
+      "legende": "Explorez les musées de renommée mondiale de Philadelphie et profitez d'une balade le long de la rivière. Une journée pour apprécier la richesse culturelle de la ville.",
+      "lieu": "Philadelphie, Pennsylvanie",
+      "activites": [
+        "🖼️ <strong>Visite du Philadelphia Museum of Art</strong>: Admirez les collections et montez les \"Rocky Steps\".",
+        "🌳 <strong>Promenade le long de la Schuylkill River Trail</strong>: Profitez d'une balade paisible au bord de l'eau.",
+        "🍽️ <strong>Dîner dans le quartier de Rittenhouse Square</strong>: Découvrez les restaurants élégants et l'ambiance animée."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Philadelphia Museum of Art, Philadelphie",
+          "categorie": "Musée",
+          "coords": { "lat": 39.9657, "lng": -75.1720 }
+        },
+        {
+          "nom_recherche": "Schuylkill River Trail, Philadelphie",
+          "categorie": "Piste cyclable/piétonne",
+          "coords": { "lat": 39.9570, "lng": -75.1850 }
+        },
+        {
+          "nom_recherche": "Rittenhouse Square, Philadelphie",
+          "categorie": "Parc/Quartier",
+          "coords": { "lat": 39.9500, "lng": -75.1700 }
+        }
+      ],
+      "illustration": "philadelphia_museum_art.jpg",
+      "encarts": [
+        {
+          "symbole": "🏃‍♂️",
+          "titre": "Anecdote",
+          "texte": "Les \"Rocky Steps\" devant le musée d'art sont célèbres grâce au film \"Rocky\". N'hésitez pas à monter les marches pour une photo!"
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🛍️",
+      "titre": "Retour vers New York et shopping décontracté",
+      "legende": "Reprenez la route vers New York pour vos dernières nuits. Profitez de l'après-midi pour un peu de shopping ou une dernière balade dans un quartier que vous avez apprécié.",
+      "lieu": "New York City",
+      "activites": [
+        "🚗 <strong>Route vers New York City</strong>: Environ 2 heures de route depuis Philadelphie.",
+        "🛏️ <strong>Installation à l'hôtel</strong>: Profitez d'un quartier différent si possible.",
+        "🛍️ <strong>Shopping ou balade à Greenwich Village</strong>: Découvrez les boutiques indépendantes et l'ambiance bohème."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Greenwich Village, New York",
+          "categorie": "Quartier",
+          "coords": { "lat": 40.7330, "lng": -74.0000 }
+        }
+      ],
+      "illustration": "greenwich_village.jpg",
+      "encarts": [
+        {
+          "symbole": "🎶",
+          "titre": "Ambiance",
+          "texte": "Greenwich Village est connu pour son histoire musicale et artistique. C'est un endroit idéal pour une balade décontractée."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "☕",
+      "titre": "Derniers instants new-yorkais",
+      "legende": "Profitez de cette dernière journée pour revisiter un lieu coup de cœur, découvrir un nouveau quartier ou simplement vous détendre dans un café. Une fin de voyage en douceur.",
+      "lieu": "New York City",
+      "activites": [
+        "☕ <strong>Brunch dans un café branché</strong>: Savourez un dernier repas typiquement new-yorkais.",
+        "🚶‍♀️ <strong>Balade sur la High Line</strong>: Une promenade urbaine sur une ancienne voie ferrée transformée en parc suspendu.",
+        "🎭 <strong>Spectacle de Broadway (optionnel)</strong>: Si l'envie vous prend, terminez en beauté avec un show."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "The High Line, New York",
+          "categorie": "Parc urbain",
+          "coords": { "lat": 40.7480, "lng": -74.0047 }
+        },
+        {
+          "nom_recherche": "Broadway Theater District, New York",
+          "categorie": "Quartier de théâtres",
+          "coords": { "lat": 40.7580, "lng": -73.9855 }
+        }
+      ],
+      "illustration": "high_line_new_york.jpg",
+      "encarts": [
+        {
+          "symbole": "🎭",
+          "titre": "Billets",
+          "texte": "Pour les spectacles de Broadway, achetez vos billets à l'avance ou tentez les loteries pour des prix réduits."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "🛫",
+      "titre": "Départ de New York",
+      "legende": "C'est le moment de dire au revoir à la Côte Est américaine. Profitez d'un dernier petit-déjeuner avant de vous diriger vers l'aéroport pour votre vol retour.",
+      "lieu": "New York City",
+      "activites": [
+        "☕ <strong>Petit-déjeuner tranquille</strong>: Profitez des derniers instants.",
+        "🛍️ <strong>Achats de dernière minute (optionnel)</strong>: Si le temps le permet.",
+        "🛫 <strong>Transfert vers l'aéroport JFK et vol retour</strong>: Fin du voyage."
+      ],
+      "illustration": "jfk_departure.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Conseil",
+          "texte": "Prévoyez suffisamment de temps pour le transfert vers l'aéroport et les formalités de sécurité, surtout en période de pointe."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "217 €/pers (A/R depuis Paris CDG)", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 575 €/pers (location voiture, essence, transports NYC)", "symbole": "🚗" },
+    { "titre": "Budget repas:", "legende": "Environ 1200 €/pers (restaurants variés, quelques repas rapides)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 1500 €/pers (hôtels 3* ou équivalent)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 600 €/pers (musées, parcs, spa, vignobles)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Mai-Juin", "symbole": "🌸" },
+    { "titre": "Septembre-Octobre", "symbole": "🍁" }
+  ],
+  "infos_pratiques": [
+    { "titre": "En mai-juin, les températures varient entre 15 et 25°C. Prévoir des couches de vêtements pour les soirées plus fraîches.", "symbole": "☀️" },
+    { "titre": "Les cartes de crédit sont largement acceptées. Prévoir quelques dollars en espèces pour les petites dépenses ou les pourboires.", "symbole": "💳" },
+    { "titre": "Un permis de conduire français est suffisant pour louer une voiture. La conduite est à droite, et les distances sont en miles, les vitesses en mph.", "symbole": "🚗" },
+    { "titre": "Une eSIM ou une carte SIM locale (T-Mobile, AT&T) est recommandée pour la navigation et la communication. Le Wi-Fi est disponible dans la plupart des hébergements.", "symbole": "📶" },
+    { "titre": "Les pourboires sont une pratique courante et attendue aux États-Unis (15-20% dans les restaurants, pour les chauffeurs, etc.).", "symbole": "💲" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le saviez-vous ?",
+      "texte": "New York City est la ville la plus linguistiquement diverse au monde, avec plus de 800 langues parlées par ses habitants. C'est une véritable mosaïque culturelle!"
+    },
+    {
+      "symbole": "🙃",
+      "titre": "Insolite",
+      "texte": "Le surnom \"Big Apple\" pour New York ne vient pas des fruits, mais d'une chronique hippique des années 1920, où les grandes courses étaient appelées \"les grosses pommes\" (the big apples) en référence aux récompenses."
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍰",
+      "titre": "New York Cheesecake",
+      "description": "Un gâteau au fromage crémeux et riche, souvent servi avec un coulis de fruits rouges. Un classique indémodable de la pâtisserie américaine."
+    },
+    {
+      "symbole": "🥯",
+      "titre": "Bagel & Lox",
+      "description": "Un bagel frais, souvent grillé, garni de cream cheese, de saumon fumé (lox), de câpres et d'oignons rouges. Un petit-déjeuner ou brunch emblématique de New York."
+    },
+    {
+      "symbole": "🥪",
+      "titre": "Philly Cheesesteak",
+      "description": "Un sandwich chaud composé de fines tranches de bœuf grillé et de fromage fondu (souvent du Cheez Whiz ou du provolone), servi dans un long pain. Une spécialité incontournable de Philadelphie."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/CDG-JFK/2026-05-15/2026-06-01", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Tourisme New York", "url": "https://www.nycgo.com/", "symbole": "📘" },
+    { "legende": "Location de voiture", "titre": "Rentalcars.com", "url": "https://www.rentalcars.com/", "symbole": "🚗" },
+    { "legende": "Météo", "titre": "AccuWeather", "url": "https://www.accuweather.com/", "symbole": "🌤️" }
+  ]
+}
